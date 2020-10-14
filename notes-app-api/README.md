@@ -190,7 +190,7 @@ aws cognito-idp sign-up \
   --region YOUR_COGNITO_REGION \
   --client-id YOUR_COGNITO_APP_CLIENT_ID \
   --username admin@example.com \
-  --password Passw0rd!
+  --password Abcd1234!
 
 ### Then, verify the user
 aws cognito-idp admin-confirm-sign-up \
