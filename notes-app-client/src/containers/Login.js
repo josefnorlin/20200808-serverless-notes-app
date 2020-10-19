@@ -7,6 +7,9 @@ import { useFormFields } from "../libs/hooksLib";
 import { onError } from "../libs/errorLib";
 import "./Login.css";
 
+// When ready for facebook:
+// https://serverless-stack.com/chapters/facebook-login-with-cognito-using-aws-amplify.html
+
 export default function Login() {
   const { userHasAuthenticated } = useAppContext();
   const [isLoading, setIsLoading] = useState(false);
