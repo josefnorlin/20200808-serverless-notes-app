@@ -41,15 +41,23 @@ export default function Signup() {
     event.preventDefault();
 
     setIsLoading(true);
+    const newUser = await Auth.signUp({
+      username: fields.email,
+      password: fields.password,
+    });
 
     try {
-      const newUser = await Auth.signUp({
-        username: fields.email,
-        password: fields.password,
-      });
+
       setIsLoading(false);
       setNewUser(newUser);
     } catch (e) {
+      const { code } = e;
+      // if (code === 'UsernameExistsException') {
+      //   onError(e);
+      //   Auth.resendSignUp(fields.email);
+      //   setNewUser(newUser);
+      // }
+      console.log('Result: ', e);
       onError(e);
       setIsLoading(false);
     }
