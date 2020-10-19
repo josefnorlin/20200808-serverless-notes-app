@@ -16,7 +16,7 @@ export default function Routes() {
       <Route exact path="/">
         <Home />
       </Route>
-      <UnauthenticatedRoute exact path="/login">{/*  */}
+      <UnauthenticatedRoute exact path="/login">
         <Login />
       </UnauthenticatedRoute>
       <UnauthenticatedRoute exact path="/signup">
